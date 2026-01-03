@@ -153,12 +153,12 @@ source .venv/bin/activate
 ### Airflow UI - DAGs List
 Once Airflow is running, you'll see your DAG in the UI:
 
-![Airflow DAGs List](docs/images/airflow-dags-list.png)
+![Airflow DAGs List](docs/images/Spark_HelloWorld_DAG.png)
 
 ### DAG Execution - Task Graph View
 When you trigger the DAG, all 5 tasks will execute in sequence:
 
-![DAG Graph View - All Tasks Success](docs/images/dag-graph-view.png)
+![DAG Graph View - All Tasks Success](docs/images/Spark_helloWorld_DAG-Tasks.png)
 
 ### Sample Spark Output
 The Spark job processes sales data and produces aggregated results:
