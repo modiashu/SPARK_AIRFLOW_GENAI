@@ -1,0 +1,33 @@
+[project]
+name = "spark-airflow-hello-world"
+version = "0.1.0"
+description = "A learning project demonstrating Apache Spark integration with Apache Airflow"
+requires-python = "==3.11.*"
+
+dependencies = [
+    "apache-airflow==2.9.3",
+    "apache-airflow-providers-apache-spark>=4.0.0,<5.0.0",
+    "pyspark==3.5.1",
+    "pandas==2.2.2",
+    "python-dotenv==1.0.1",
+    "requests==2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.2.2",
+    "pytest-cov==5.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["spark_jobs", "dags"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2.2",
+    "pytest-cov>=5.0.0",
+]
